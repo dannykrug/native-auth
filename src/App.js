@@ -31,9 +31,9 @@ class App extends Component {
     switch (this.state.loggedIn) {
       case true:
       return (
-        <CardSection>
-          <Button onPress={() => firebase.auth().signOut()}>Log Out</Button>
-        </CardSection>
+          <CardSection>
+            <Button onPress={() => firebase.auth().signOut()}>Log Out</Button>
+          </CardSection>
       );
       case false:
         return <LoginForm />;
@@ -58,6 +58,9 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     flex: 1
+  },
+  imageStyle: {
+    size: { height: 150, width: 150}
   }
 };
 
